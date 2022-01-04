@@ -1,0 +1,29 @@
+1/1/2022
+
+Just finished:
+  Building custom select menu, not quite complete
+
+To do: 
+
+  filter countries by select menu option and re-render country-list 
+
+  Complete custom select menu:
+    Add handleClick function for .option:
+      change state in CountryList component?
+  
+  Complete Search component:
+    Create handleSubmit functionality that will filter/re-render countries based on form input
+
+  Create CountryDetails component
+    Make country-cards into clickable links 
+    Create and style CountryDetails component content
+    Add functionality (back button, etc)
+
+  Add dark/light mode functionality using useContext(?)... re-watch Net Ninja tutorial for this
+
+
+
+
+
+
+

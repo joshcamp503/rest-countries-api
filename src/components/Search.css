@@ -1,0 +1,139 @@
+/* Top-level styles */
+.search {
+  display: flex;
+    justify-content: center;
+  margin: 2rem 0;
+}
+
+.search-form {
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Search bar styles */
+
+.search-bar-container, .search-form select {
+  background: white;
+  border-radius: 5px;
+  display: flex;
+    align-items: center;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+}
+
+.search-bar-container{
+  width: 300px;
+}
+
+.search-bar-container .search-bar::placeholder{
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.search-bar-container i {
+  width: 2rem;
+}
+
+.search-bar-container .search-bar {
+  border: none;
+  padding: 0.5rem;
+}
+
+.search-bar-container input:focus {
+  outline: none;
+}
+
+/* Custom Select Menu styles*/
+
+.select-menu{
+  height: 3rem;
+  position: relative;
+  width: 200px;
+}
+
+.select-menu p, .select-menu ul {
+  background-color: white;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.select-menu p {
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+}
+
+.select-menu i{
+  position: absolute;
+    top: 50%;
+    right: 1rem;
+  transform: translateY(-50%);
+}
+
+.options-menu-container::before{
+  content: " ";
+  display: block;
+  border-top: 3px solid hsl(0, 0%, 97%);
+}
+
+.options-menu {
+  border-radius: 5px;
+  display: none;           
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.active {
+  display: flex;
+    flex-direction: column;
+  position: absolute;
+  width: 200px;
+}
+
+/* this will be a click event toggle */
+.select-menu:hover .options-menu .active {
+}
+
+.option {
+  padding: 0.3rem;
+}
+
+.option:hover {
+  background: hsl(0, 0%, 97%);
+}
+
+
+
+
+/* .select-container i {
+  pointer-events: none;
+  position: absolute;
+    top: 50%;
+    right: 10%;
+  transform: translateY(-50%)
+} */
+
+/* .select-container option:first-child{
+  display: none;
+} */
+
+@media screen and (min-width: 600px) {
+
+  .search {
+    display: block;
+    margin: 0 3rem;
+  }
+
+  .search-form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .search {
+    margin: 2rem 6rem;
+  }
+}
