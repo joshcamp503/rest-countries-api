@@ -1,10 +1,12 @@
-
+import { useCountries } from '../hooks/useCountries'
 
 // STYLES
 import './CountryList.css'
 
 
-export default function CountryList({ countries }) {
+export default function CountryList() {
+  const { countries } = useCountries()
+
 
   return (
     <div className="country-list">

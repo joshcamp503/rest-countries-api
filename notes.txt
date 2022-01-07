@@ -1,15 +1,11 @@
 1/1/2022
 
 Just finished:
-  Building custom select menu, not quite complete
+  Using useContext, useReducer, and custom fetch hook to set state with data from API
 
 To do: 
 
-  filter countries by select menu option and re-render country-list 
-
-  Complete custom select menu:
-    Add handleClick function for .option:
-      change state in CountryList component?
+  Implement state reset function that fires before filterCountries                                                                   
   
   Complete Search component:
     Create handleSubmit functionality that will filter/re-render countries based on form input

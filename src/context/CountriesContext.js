@@ -1,31 +1,58 @@
-import { createContext } from "react";
-import { useFetch } from "../hooks/useFetch";
+import { createContext, useReducer } from "react";
+import { useFetch  } from "../hooks/useFetch";
 
 export const CountriesContext = createContext()
 
-// const countriesReducer = (state, action) => {
-//   switch (action.type) {
-//     case 'CHANGE_COUNTRIES':
-//       return { ...state, countries: action.payload }
-//     default: 
-//       return state
-//   }
-// }
+const countriesReducer = (state, action) => {
+  switch (action.type) {
+    case 'FILTER_COUNTRIES':
+      return { ...state, countries: action.payload }
+    case 'GET_COUNTRIES':
+      console.log(action.payload)
+      return { ...state, countries: action.payload, defaultState: action.payload }
+    default: 
+      return state
+  }
+}
+
+const obj = { 'key': 'value'}
+const newObj = {...obj, key: 'dick'}
 
 export function CountriesProvider({ children }) {
-  const { data:countries, isPending, error } = useFetch('https://restcountries.com/v3.1/all')
-  
 
-  // const [state, dispatch] = useReducer(countriesReducer, {
-  //   countries: 'countries'
-  // })
+  const initialState = {
+    countries: [],
+    defaultState: []
+  }
 
-  // const changeCountries = (countries) => {
-  //   dispatch({ type: 'CHANGE_COUNTRIES', payload: countries })
-  // }
+  const [state, dispatch] = useReducer(countriesReducer, initialState)
+
+  const getCountries = (countries) => {
+    dispatch({ type: 'GET_COUNTRIES', payload: countries })
+  }
+
+  const { data, isPending, error } = useFetch('https://restcountries.com/v3.1/all', getCountries)
+
+
+  const filterCountries = (countries, target) => {
+    if(!target.classList.contains('option')) return false
+    const { defaultState } = state
+    const filterParam = target.textContent
+    if (filterParam === 'All' ) {
+      countries = defaultState.map(country => {
+        return country
+      })
+    } else {
+        countries = defaultState.filter(country => {
+        return country.region === filterParam
+      })
+    }
+    
+    dispatch({ type: 'FILTER_COUNTRIES', payload: countries })
+  }
 
   return (
-    <CountriesContext.Provider value={{ countries, isPending, error }}>
+    <CountriesContext.Provider value={{ ...state, getCountries, filterCountries, data, isPending, error }}>
       {children}
     </CountriesContext.Provider>
   )
