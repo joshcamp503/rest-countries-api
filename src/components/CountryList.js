@@ -1,17 +1,25 @@
+import { Link } from 'react-router-dom'
 import { useCountries } from '../hooks/useCountries'
+import { useMode } from '../hooks/useMode'
 
 // STYLES
 import './CountryList.css'
 
 
 export default function CountryList() {
-  const { countries } = useCountries()
+  const { countries, searchTerm } = useCountries()
+  const { mode } = useMode()
+
+  const listCountries = (searchTerm) => countries.filter(country => {
+    return country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 
 
   return (
     <div className="country-list">
-      {countries.map(country => (
-        <div className="country-card" key={country.name.common}>
+      {listCountries(searchTerm).map((country, index) => (
+        <div className={`country-card ${mode} grow`} key={index}>
+        <Link to={`/country/${country.name.common}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <div className="flag-container">
             <img src={country.flags.png} alt="country flag" />
           </div>
@@ -21,7 +29,8 @@ export default function CountryList() {
             <p>Region: <span>{country.region}</span></p>
             <p>Capital: <span>{country.capital}</span></p>
           </div>
-      </div>
+        </Link>
+        </div>
       ))}
     </div>
   )

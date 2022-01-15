@@ -1,0 +1,78 @@
+/* DARK MODE STYLE */
+.country-page.dark .back-btn {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0px 0px 5px 0px hsl(200, 15%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+.country-page.dark .flag-container {
+  box-shadow: 0px 0px 15px 0px hsl(200, 15%, 8%);
+}
+
+.country-page.dark .border-countries-container button {
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 0px hsl(200, 15%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* DEFAULT STYLES */
+.country-page {
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.country-page-content {
+  width: 300px;
+}
+
+.country-page .back-btn {
+  background: hsl(0, 0%, 98%);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px 3px #dddddd;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  padding: 0.3rem 1.2rem 0.2rem 1.2rem;
+}
+
+.country-page button i {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.country-page .back-btn span {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 750px) {
+
+  .country-page-content {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .country-page-content {
+    display: block;
+  }
+  
+  .country-page .back-btn {
+    margin: 4rem 0;
+    padding: 0.5rem 1.7rem 0.4rem 1.5rem;
+  }
+
+  .country-page-content {
+    margin: 0 5rem;
+    width: fit-content;
+  }
+
+  .country-details-container {
+    height: 100%;
+    display: flex;
+      align-content: center;
+  }
+}

@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* DARK MODE STYLES */
+
+#root {
+  height: 100vh;
+}
+
+.App.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* DEFAULT STYLES */
 *,
 *::before,
 *::after {
@@ -11,20 +24,35 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: hsl(0, 0%, 97%);
   color: hsl(200, 15%, 8%);
 }
 
-/* Dark-mode theme */
+.App {
+  height: 100%;
+}
 
-.dark-mode {
-  background: hsl(207, 26%, 17%);
+.home {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.home.dark {
+  background-color: hsl(207, 26%, 17%);
   color: hsl(0, 0%, 100%);
 }
 
-.dark-mode button {
-  color: hsl(0, 0%, 100%);
+@media screen and (min-width: 1200px) {
+  .grow { 
+    transition: transform 0.2s ease-in-out; 
+  }
+  
+  .grow:hover {
+    transform: scale(1.05); 
+  }
 }
-
-

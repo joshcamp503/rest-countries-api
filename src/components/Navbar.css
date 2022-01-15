@@ -1,37 +1,51 @@
+/* DARK MODE STYLES */
+.navbar.dark {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0px 0px 4px 0px hsl(200, 15%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+.navbar.dark button,
+.navbar.dark i {
+  color: white;
+  cursor: pointer;
+}
+
+/* DEFAULT STYLES */
 .navbar {
   background: white;
-  box-shadow: 0px 0px 4px 4px #eeeeee;
+  box-shadow: 0px 0px 4px 3px #eeeeee;
+  color: hsl(200, 15%, 8%);
   display: flex;
     align-items: center;
     flex-wrap: flex;
     justify-content: space-between;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  padding: 1.8rem 1rem;
+  font-size: 0.7rem;
+  padding: 1.2rem 1rem;
 }
 
 .navbar button {
   border: none;
   background: hsla(0, 0%, 98%, 0%);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
 .navbar i {
+  color: hsl(200, 15%, 8%);
   margin: 0.5rem;
 }
 
 @media screen and (min-width: 600px) {
   .navbar {
-    font-size: 1.4rem;
-    padding: 1.8rem 4rem;
+    font-size: 1rem;
+    padding: 1.5rem 4rem;
   }
 
 }
 
 @media screen and (min-width: 1200px) {
   .navbar {
-    margin-bottom: 3rem;
-    padding: 2rem 6rem;
+    padding: 1.2rem 6rem;
   }
 }

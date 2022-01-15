@@ -1,3 +1,43 @@
+/* DARK MODE STYLES */
+.search.dark .search-bar-container,
+.search.dark p,
+.search.dark ul {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0px 0px 4px 0px hsl(200, 15%, 8%);
+}
+
+.search.dark .search-bar {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+/* StackOverflow snippet to remove browser autofill background color */
+.search.dark input:-webkit-autofill,
+.search.dark input:-webkit-autofill:hover, 
+.search.dark input:-webkit-autofill:focus, 
+.search.dark input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px hsl(209, 23%, 22%) inset;
+  -webkit-text-fill-color: white;
+}
+
+.search.dark .search-bar::placeholder {
+  color: white;
+}
+
+.search.dark .select-menu {
+  box-shadow: 0px 0px 4px 0px hsl(200, 15%, 8%);
+}
+
+.search.dark .options-menu-container::before {
+  border-top: 3px solid hsl(207, 26%, 17%);
+}
+
+.search.dark .option:hover {
+  background: hsl(207, 26%, 17%);
+}
+
+
+/* DEFAULT STYLES */
 /* Top-level styles */
 .search {
   display: flex;
@@ -13,16 +53,14 @@
 
 /* Search bar styles */
 
-.search-bar-container, .search-form select {
+.search-bar-container {
   background: white;
   border-radius: 5px;
+  box-shadow: 0px 0px 4px 3px #eeeeee;
   display: flex;
     align-items: center;
   height: 3rem;
   padding: 1rem 1.5rem;
-}
-
-.search-bar-container{
   width: 300px;
 }
 
@@ -44,9 +82,19 @@
   outline: none;
 }
 
+/* StackOverflow snippet to remove browser autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 /* Custom Select Menu styles*/
 
 .select-menu{
+  box-shadow: 0px 0px 4px 3px #eeeeee;
+  cursor: pointer;
   height: 3rem;
   position: relative;
   width: 200px;
@@ -102,21 +150,6 @@
 .option:hover {
   background: hsl(0, 0%, 97%);
 }
-
-
-
-
-/* .select-container i {
-  pointer-events: none;
-  position: absolute;
-    top: 50%;
-    right: 10%;
-  transform: translateY(-50%)
-} */
-
-/* .select-container option:first-child{
-  display: none;
-} */
 
 @media screen and (min-width: 600px) {
 

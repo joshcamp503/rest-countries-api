@@ -1,17 +1,21 @@
+import { Link } from 'react-router-dom'
+import { useMode } from '../hooks/useMode';
+
 // styles
 import './Navbar.css'
 
-export default function Navbar() {
+// COMPONENTS
+import ModeSelector from './ModeSelector'
 
-  const toggleDarkMode = () => {
-    const body = document.querySelector('body')
-    body.classList.toggle('dark-mode')
-  }
+export default function Navbar() {
+  const { mode } = useMode()
 
   return ( 
-    <nav className="navbar">
-      <h3>Where in the world?</h3>
-      <button onClick={toggleDarkMode}><i className="far fa-moon"></i>Dark Mode</button>
+    <nav className={`navbar ${mode}`}>
+      <Link to="/" onClick={() => window.location.reload()} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <h3>Where in the world?</h3>
+      </Link>
+      <ModeSelector />
     </nav>
    );
 }

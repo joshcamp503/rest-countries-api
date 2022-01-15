@@ -7,21 +7,20 @@ const countriesReducer = (state, action) => {
   switch (action.type) {
     case 'FILTER_COUNTRIES':
       return { ...state, countries: action.payload }
+    case 'SET_SEARCH_TERM':
+      return { ...state, searchTerm: action.payload }
     case 'GET_COUNTRIES':
-      console.log(action.payload)
       return { ...state, countries: action.payload, defaultState: action.payload }
     default: 
       return state
   }
 }
 
-const obj = { 'key': 'value'}
-const newObj = {...obj, key: 'dick'}
-
 export function CountriesProvider({ children }) {
 
   const initialState = {
     countries: [],
+    searchTerm: '',
     defaultState: []
   }
 
@@ -32,6 +31,10 @@ export function CountriesProvider({ children }) {
   }
 
   const { data, isPending, error } = useFetch('https://restcountries.com/v3.1/all', getCountries)
+
+  const setSearchTerm = (searchTerm) => {
+    dispatch({ type: 'SET_SEARCH_TERM', payload: searchTerm })
+  }
 
 
   const filterCountries = (countries, target) => {
@@ -52,7 +55,7 @@ export function CountriesProvider({ children }) {
   }
 
   return (
-    <CountriesContext.Provider value={{ ...state, getCountries, filterCountries, data, isPending, error }}>
+    <CountriesContext.Provider value={{ ...state, getCountries, setSearchTerm, filterCountries, data, isPending, error }}>
       {children}
     </CountriesContext.Provider>
   )
