@@ -9,6 +9,7 @@ import './CountryList.css'
 export default function CountryList() {
   const { countries, searchTerm } = useCountries()
   const { mode } = useMode()
+  console.log(countries)
 
   const listCountries = (searchTerm) => countries.filter(country => {
     return country.name.common.toLowerCase().includes(searchTerm.toLowerCase())

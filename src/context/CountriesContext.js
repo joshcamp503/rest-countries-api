@@ -10,6 +10,7 @@ const countriesReducer = (state, action) => {
     case 'SET_SEARCH_TERM':
       return { ...state, searchTerm: action.payload }
     case 'GET_COUNTRIES':
+      console.log(action.payload)
       return { ...state, countries: action.payload, defaultState: action.payload }
     default: 
       return state
