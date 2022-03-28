@@ -20,7 +20,7 @@ export default function CountryList() {
     <div className="country-list">
       {listCountries(searchTerm).map((country, index) => (
         <div className={`country-card ${mode} grow`} key={index}>
-        <Link to={`/country/${country.name.common}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to={`/rest-countries-api/country/${country.name.common}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <div className="flag-container">
             <img src={country.flags.png} alt="country flag" />
           </div>

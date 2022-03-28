@@ -21,9 +21,9 @@ export default function Country() {
 
   const handleClick = (e) => {
     if (e.target.textContent === 'Back') {
-      navigate('/')
+      navigate('/rest-countries-api')
     } else {
-      navigate(`/country/${e.target.textContent}`)
+      navigate(`/rest-countries-api/country/${e.target.textContent}`)
     }
   }
 

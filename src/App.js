@@ -14,8 +14,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="country/:id" element={<Country />} />
+          <Route path="/rest-countries-api" element={<Home />} />
+          <Route path="/rest-countries-api/country/:id" element={<Country />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -24,6 +24,12 @@
   padding: 1.2rem 1rem;
 }
 
+.navbar #earth {
+  height: 14px;
+  margin-right: 5px;
+  width: 14px;
+}
+
 .navbar button {
   border: none;
   background: hsla(0, 0%, 98%, 0%);
