@@ -1,8 +1,8 @@
 {
-  "name": "rest-countries-api",
+  "name": "where-in-the-world",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://joshcamp.dev/rest-countries-api/",
+  "homepage": "http://joshcamp.dev/where-in-the-world/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",

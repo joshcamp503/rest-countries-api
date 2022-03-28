@@ -16,7 +16,7 @@ export default function Navbar() {
   return ( 
     <nav className={`navbar ${mode}`}>
       {/* <Link to="/rest-countries-api" onClick={() => window.location.reload()} style={{ textDecoration: 'none', color: 'inherit' }}> */}
-      <Link to="/rest-countries-api" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <h3><img id="earth" src={Earth} alt="planet earth" />Where in the world?</h3>
       </Link>
       <ModeSelector />

@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useCallback } from "react";
 import { useFetch  } from "../hooks/useFetch";
 
 export const CountriesContext = createContext()
@@ -10,7 +10,6 @@ const countriesReducer = (state, action) => {
     case 'SET_SEARCH_TERM':
       return { ...state, searchTerm: action.payload }
     case 'GET_COUNTRIES':
-      console.log(action.payload)
       return { ...state, countries: action.payload, defaultState: action.payload }
     default: 
       return state
@@ -27,9 +26,10 @@ export function CountriesProvider({ children }) {
 
   const [state, dispatch] = useReducer(countriesReducer, initialState)
 
-  const getCountries = (countries) => {
+  // To prevent console warning, memoize with useCallback before passing into useFetch and thus into useEffect
+  const getCountries = useCallback((countries) => {
     dispatch({ type: 'GET_COUNTRIES', payload: countries })
-  }
+  }, [])
 
   const { data, isPending, error } = useFetch('https://restcountries.com/v3.1/all', getCountries)
 

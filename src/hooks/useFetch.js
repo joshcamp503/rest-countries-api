@@ -42,7 +42,7 @@ export const useFetch = (url, dispatchFunc) => {
     return () => {
       controller.abort()
     }
-  }, [url])
+  }, [url, dispatchFunc])
 
   return { data, isPending, error }
 }

@@ -11,11 +11,11 @@ function App() {
 
   return ( 
     <div className={`App ${mode}`}>
-      <BrowserRouter>
+      <BrowserRouter basename="/where-in-the-world">
         <Navbar />
         <Routes>
-          <Route path="/rest-countries-api" element={<Home />} />
-          <Route path="/rest-countries-api/country/:id" element={<Country />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/country/:id" element={<Country />} />
         </Routes>
       </BrowserRouter>
     </div>
