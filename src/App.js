@@ -4,10 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Country from "./pages/country/Country";
+import InfoModal from "./components/InfoModal";
+
+// HOOKS
 import { useMode } from "./hooks/useMode";
 
 function App() {
-  const { mode } = useMode()
+  const { mode, showInfo, setShowInfo } = useMode()
 
   return ( 
     <div className={`App ${mode}`}>
@@ -17,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/country/:id" element={<Country />} />
         </Routes>
+        {showInfo && <InfoModal setShowInfo={setShowInfo}/>}
       </BrowserRouter>
     </div>
   )

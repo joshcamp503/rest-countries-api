@@ -24,9 +24,23 @@
   padding: 1.2rem 1rem;
 }
 
+.navbar .header {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar #earth {
   height: 14px;
   margin-right: 5px;
+  width: 14px;
+}
+
+.navbar #info-btn {
+  cursor: pointer;
+  height: 14px;
+  margin-left: 5px;
+  margin-right: auto;
   width: 14px;
 }
 

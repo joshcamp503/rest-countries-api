@@ -1,0 +1,46 @@
+.info-modal {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+    justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  width: 100%;
+}
+
+.info-modal .info-box {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+    flex-direction: column;
+  height: fit-content;
+  margin-top: 2rem;
+  padding: 2rem;
+  padding-top: 2rem;
+  text-align: left;
+  width: clamp(300px, 95%, 500px);
+}
+
+.info-modal .info-box span {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.info-modal .info-box h2 {
+  margin-bottom: 1rem;
+}
+
+.info-modal .info-box p {
+  margin: 0.5rem 0;
+}
+
+.info-modal .info-box #call-to-action {
+  cursor: pointer;
+  font-weight: bold;
+}

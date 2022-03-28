@@ -9,9 +9,14 @@ import ModeSelector from './ModeSelector'
 
 // IMAGES
 import Earth from '../assets/icons8-planet-earth-47.png'
+import Info from '../assets/icons8-info-24.png'
 
 export default function Navbar() {
-  const { mode } = useMode()
+  const { mode, showInfo, setShowInfo } = useMode()
+
+  const toggleDisplay = () => {
+    showInfo ? setShowInfo(false) : setShowInfo(true)
+  }
 
   return ( 
     <nav className={`navbar ${mode}`}>
@@ -19,6 +24,7 @@ export default function Navbar() {
       <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <h3><img id="earth" src={Earth} alt="planet earth" />Where in the world?</h3>
       </Link>
+      <img id="info-btn" src={Info} alt="info" onClick={() => {toggleDisplay()}}></img>
       <ModeSelector />
     </nav>
    );
