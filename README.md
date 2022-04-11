@@ -1,3 +1,63 @@
+# Where in the World?
+
+An online collection of geographic information about 250 countries worldwide. 
+
+## About
+
+Where in the World? curates information from the REST Countries API, and uses it to create profiles for every couuntry on Earth. Learn about each country's population, currency, top level domain, border countries, etc with this useful resource.  
+
+This project was built with React.js. This was my first React project of this level of complexity and it provided some unique challenges.  Since the data from the API was relatively small, I wanted to limit the number of HTTP requests the app made to the API to provide the user with a fast, seamless experience.  To accomplish this, I set the data from the API as global state using useReducer and a custom Context provider. I used a custom hook based off of useEffect to fetch the data and dispatch it into global state.  
+
+This project is my solution to a challenge from frontendmentor.io, an online collection of coding challenges for developers to test and hone their skills with HTML, CSS, Javascript, and any framework(s) they choose to work with. Scroll down to see the README from frontendmentor.io to learn more about what the goals and expectations were for this challenge.
+
+## Project Screen Shot(s)
+
+[](src/assets/where-in-the-world-preview.png)
+<img src="src/assets/where-in-the-world-preview.png" alt="homepage preview" height="325" width="500">
+
+[](src/assets/where-in-the-world-dark-mode.png)
+<img src="src/assets/where-in-the-world-dark-mode.png" alt="dark mode preview" height="325" width="500">
+
+[](src/assets/where-in-the-world-search-preview.png)
+<img src="src/assets/where-in-the-world-search-preview.png" alt="country search preview" height="325" width="500">
+
+[](src/assets/where-in-the-world-details-preview.png)
+<img src="src/assets/where-in-the-world-details-preview.png" alt="country details preview" height="325" width="500">
+
+## Live Demo
+
+https://joshcamp.dev/where-in-the-world
+
+
+## Dependencies
+
+
+
+*Node.js
+
+*React.js
+
+## Authors
+
+Josh Campanella  
+[Portfolio](https://joshcamp.dev)
+
+## Version History
+
+* 0.1
+    * Initial Release
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+
+* [REST Countries API](https://restcountries.com/)
+* [React.js](https://leafletjs.com/)
+* [frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+
+
+# README for this project directly from Frontend Mentor
+
 # Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
