@@ -13,16 +13,16 @@ This project is my solution to a challenge from frontendmentor.io, an online col
 ## Project Screen Shot(s)
 
 [](src/assets/where-in-the-world-preview.png)
-<img src="src/assets/where-in-the-world-preview.png" alt="homepage preview" height="325" width="500">
+<img src="src/assets/where-in-the-world-preview.png" alt="homepage preview" height="250" width="400">
 
 [](src/assets/where-in-the-world-dark-mode.png)
-<img src="src/assets/where-in-the-world-dark-mode.png" alt="dark mode preview" height="325" width="500">
+<img src="src/assets/where-in-the-world-dark-mode.png" alt="dark mode preview" height="250" width="400">
 
 [](src/assets/where-in-the-world-search-preview.png)
-<img src="src/assets/where-in-the-world-search-preview.png" alt="country search preview" height="325" width="500">
+<img src="src/assets/where-in-the-world-search-preview.png" alt="country search preview" height="250" width="400">
 
 [](src/assets/where-in-the-world-details-preview.png)
-<img src="src/assets/where-in-the-world-details-preview.png" alt="country details preview" height="325" width="500">
+<img src="src/assets/where-in-the-world-details-preview.png" alt="country details preview" height="250" width="400">
 
 ## Live Demo
 
